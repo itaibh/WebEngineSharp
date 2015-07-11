@@ -1,0 +1,10 @@
+using System;
+
+namespace WebEngineSharp.DOM
+{
+	public interface IGlobalEventHandlers
+	{
+	}
+    
+}
+

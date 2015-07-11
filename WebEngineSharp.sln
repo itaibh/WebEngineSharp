@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebEngineSharp.HtmlParser", "WebEngineSharp\WebEngineSharp.HtmlParser.csproj", "{14837E2B-51FC-4C79-A02E-B2BEDDAAAFF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParserTests", "ParserTests\ParserTests.csproj", "{FBE568A7-4E23-490E-B7BA-F8ABB75B6350}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14837E2B-51FC-4C79-A02E-B2BEDDAAAFF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14837E2B-51FC-4C79-A02E-B2BEDDAAAFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14837E2B-51FC-4C79-A02E-B2BEDDAAAFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14837E2B-51FC-4C79-A02E-B2BEDDAAAFF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBE568A7-4E23-490E-B7BA-F8ABB75B6350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE568A7-4E23-490E-B7BA-F8ABB75B6350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE568A7-4E23-490E-B7BA-F8ABB75B6350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE568A7-4E23-490E-B7BA-F8ABB75B6350}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

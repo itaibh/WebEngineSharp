@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{14837E2B-51FC-4C79-A02E-B2BEDDAAAFF0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebEngineSharp</RootNamespace>
+    <AssemblyName>WebEngineSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DOM\Location.cs" />
+    <Compile Include="DOM\HTMLCollection.cs" />
+    <Compile Include="DOM\NodeList.cs" />
+    <Compile Include="DOM\WindowProxy.cs" />
+    <Compile Include="DOM\IGlobalEventHandlers.cs" />
+    <Compile Include="DOM\IElement.cs" />
+    <Compile Include="DOM\INode.cs" />
+    <Compile Include="DOM\Attr.cs" />
+    <Compile Include="DOM\DOMTokenList.cs" />
+    <Compile Include="DOM\IEventTarget.cs" />
+    <Compile Include="DOM\Impl\Element.cs" />
+    <Compile Include="DOM\Impl\Node.cs" />
+    <Compile Include="DOM\IEventListener.cs" />
+    <Compile Include="DOM\IEvent.cs" />
+    <Compile Include="DOM\Impl\Event.cs" />
+    <Compile Include="DOM\DOMTimeStamp.cs" />
+    <Compile Include="DOM\Impl\EventTarget.cs" />
+    <Compile Include="DOM\EventInit.cs" />
+    <Compile Include="DOM\DOMStringMap.cs" />
+    <Compile Include="DOM\Impl\Document.cs" />
+    <Compile Include="DOM\IDocument.cs" />
+    <Compile Include="DOM\Range.cs" />
+    <Compile Include="DOM\DocumentFragment.cs" />
+    <Compile Include="DOM\ProcessingInstruction.cs" />
+    <Compile Include="DOM\NodeIterator.cs" />
+    <Compile Include="DOM\TreeWalker.cs" />
+    <Compile Include="DOM\DOMImplementation.cs" />
+    <Compile Include="DOM\IDocumentType.cs" />
+    <Compile Include="DOM\Impl\DocumentType.cs" />
+    <Compile Include="DOM\NodeFilter.cs" />
+    <Compile Include="DOM\HTMLUnknownElement.cs" />
+    <Compile Include="DOM\ILinkStyle.cs" />
+    <Compile Include="DOM\DOMSettableTokenList.cs" />
+    <Compile Include="DOM\StyleSheet.cs" />
+    <Compile Include="DOM\MediaList.cs" />
+    <Compile Include="DOM\IText.cs" />
+    <Compile Include="DOM\ICharacterData.cs" />
+    <Compile Include="DOM\IProcessingInstruction.cs" />
+    <Compile Include="DOM\IComment.cs" />
+    <Compile Include="Parser\HtmlParser.cs" />
+    <Compile Include="Parser\AttributeParser.cs" />
+    <Compile Include="Parser\CommentParser.cs" />
+    <Compile Include="Parser\NodeParser.cs" />
+    <Compile Include="Parser\HtmlToken.cs" />
+    <Compile Include="Parser\DocTypeNodeParser.cs" />
+    <Compile Include="Parser\TokenParserBase.cs" />
+    <Compile Include="Parser\DocumentParser.cs" />
+    <Compile Include="Tokenizer\BaseToken.cs" />
+    <Compile Include="Tokenizer\DocTypeToken.cs" />
+    <Compile Include="Tokenizer\TagToken.cs" />
+    <Compile Include="Tokenizer\StartTagToken.cs" />
+    <Compile Include="Tokenizer\EndTagToken.cs" />
+    <Compile Include="Tokenizer\Tokens.cs" />
+    <Compile Include="Tokenizer\HtmlTokenizer.cs" />
+    <Compile Include="Tokenizer\States\CharacterReferenceInDataState.cs" />
+    <Compile Include="Tokenizer\States\DataState.cs" />
+    <Compile Include="Tokenizer\States\TagOpenState.cs" />
+    <Compile Include="Tokenizer\States\BaseState.cs" />
+    <Compile Include="Tokenizer\States\MarkupDeclarationOpenState.cs" />
+    <Compile Include="Tokenizer\States\CommentStartState.cs" />
+    <Compile Include="Tokenizer\States\CommentStartDashState.cs" />
+    <Compile Include="Tokenizer\States\CommentState.cs" />
+    <Compile Include="Tokenizer\States\EndTagOpenState.cs" />
+    <Compile Include="Tokenizer\States\BogusCommentState.cs" />
+    <Compile Include="Tokenizer\States\TagNameState.cs" />
+    <Compile Include="Tokenizer\States\BeforeAttributeNameState.cs" />
+    <Compile Include="Tokenizer\States\SelfClosingStartTagState.cs" />
+    <Compile Include="Tokenizer\CommentToken.cs" />
+    <Compile Include="Tokenizer\States\DocTypeState.cs" />
+    <Compile Include="Tokenizer\States\CdataSectionState.cs" />
+    <Compile Include="Tokenizer\States\BeforeDocTypeNameState.cs" />
+    <Compile Include="Tokenizer\States\DocTypeNameState.cs" />
+    <Compile Include="Tokenizer\States\AfterDocTypeNameState.cs" />
+    <Compile Include="Tokenizer\States\AfterDocTypePublicKeywordState.cs" />
+    <Compile Include="Tokenizer\States\AfterDocTypeSystemKeywordState.cs" />
+    <Compile Include="Utils\StreamReaderExt.cs" />
+    <Compile Include="Tokenizer\States\BeforeDocTypePublicIdentifierState.cs" />
+    <Compile Include="Tokenizer\States\BogusDocTypeState.cs" />
+    <Compile Include="Tokenizer\States\DocTypePublicIdentifierQuotedState.cs" />
+    <Compile Include="Tokenizer\States\AfterDocTypePublicIdentifierState.cs" />
+    <Compile Include="Tokenizer\States\DocTypeSystemIdentifierQuotedState.cs" />
+    <Compile Include="Tokenizer\States\AfterDocTypeSystemIdentifierState.cs" />
+    <Compile Include="Tokenizer\States\BetweenDocTypePublicAndSystemIdentifiersState.cs" />
+    <Compile Include="Tokenizer\States\CommentEndDashState.cs" />
+    <Compile Include="Tokenizer\States\CommentEndState.cs" />
+    <Compile Include="Tokenizer\States\CommentEndBangState.cs" />
+    <Compile Include="Tokenizer\AttributeToken.cs" />
+    <Compile Include="Tokenizer\States\AttributeNameState.cs" />
+    <Compile Include="Tokenizer\States\AfterAttributeNameState.cs" />
+    <Compile Include="Tokenizer\States\BeforeAttributeValueState.cs" />
+    <Compile Include="Tokenizer\States\AttributeValueQuotedState.cs" />
+    <Compile Include="Tokenizer\States\AttributeValueUnquotedState.cs" />
+    <Compile Include="Tokenizer\States\AfterAttributeValueQuotedState.cs" />
+    <Compile Include="Tokenizer\States\CharacterReferenceInAttributeValueState.cs" />
+    <Compile Include="Tokenizer\TreeConstruction.cs" />
+    <Compile Include="Tokenizer\CharacterToken.cs" />
+    <Compile Include="Tokenizer\EndOfFileToken.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InitialInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\BeforeHTMLInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\BeforeHeadInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InHeadInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InHeadNoScriptInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\AfterHeadInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InBodyInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\TextInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InTableInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InTableTextInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InCaptionInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InColumnGroupInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InTableBodyInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InRowInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InCellInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InSelectInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InSelectInTableInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InTemplateInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\AfterBodyInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\InFramesetInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\AfterFramesetInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\AfterAfterBodyInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\AfterAfterFramesetInsertionModeState.cs" />
+    <Compile Include="Tokenizer\InsertionMode\BaseInsertionModeState.cs" />
+    <Compile Include="DOM\Impl\Comment.cs" />
+    <Compile Include="DOM\Impl\CharacterData.cs" />
+    <Compile Include="DOM\IHTMLElement.cs" />
+    <Compile Include="DOM\Impl\HTMLElement.cs" />
+    <Compile Include="DOM\Impl\HTMLHtmlElement.cs" />
+    <Compile Include="DOM\IHTMLHtmlElement.cs" />
+    <Compile Include="DOM\IHTMLHeadElement.cs" />
+    <Compile Include="DOM\Impl\HTMLHeadElement.cs" />
+    <Compile Include="DOM\Impl\HTMLBaseElement.cs" />
+    <Compile Include="DOM\Impl\HTMLLinkElement.cs" />
+    <Compile Include="DOM\IHTMLLinkElement.cs" />
+    <Compile Include="DOM\IHTMLBaseElement.cs" />
+    <Compile Include="Tokenizer\InsertionModeTokenProcessingQueue.cs" />
+    <Compile Include="Tokenizer\ITokenQueue.cs" />
+    <Compile Include="DOM\Impl\HTMLAnchorElement.cs" />
+    <Compile Include="DOM\Impl\HtmlElementFactory.cs" />
+    <Compile Include="DOM\Impl\HTMLQuoteElement.cs" />
+    <Compile Include="DOM\Impl\HTMLDataElement.cs" />
+    <Compile Include="DOM\Impl\HTMLTimeElement.cs" />
+    <Compile Include="DOM\Impl\HTMLSpanElement.cs" />
+    <Compile Include="DOM\Impl\HTMLBRElement.cs" />
+    <Compile Include="DOM\Impl\Text.cs" />
+    <Compile Include="Tokenizer\States\RCDATAState.cs" />
+    <Compile Include="Tokenizer\States\CharacterReferenceInRCDATAState.cs" />
+    <Compile Include="Tokenizer\States\RCDATALessThanSignState.cs" />
+    <Compile Include="DOM\Impl\HTMLTitleElement.cs" />
+    <Compile Include="DOM\IHTMLTitleElement.cs" />
+    <Compile Include="Tokenizer\States\RCDATAEndTagOpenState.cs" />
+    <Compile Include="Tokenizer\States\RCDATAEndTagNameState.cs" />
+    <Compile Include="Tokenizer\States\PLAINTEXTState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Cairo" />
+    <Reference Include="Mono.Simd" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=c7439020c8fedf87">
+      <Package>monodevelop</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DOM\" />
+    <Folder Include="DOM\Impl\" />
+    <Folder Include="Parser\" />
+    <Folder Include="Tokenizer\" />
+    <Folder Include="Tokenizer\States\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Tokenizer\InsertionMode\" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <DotNetNamingPolicy DirectoryNamespaceAssociation="PrefixedHierarchical" ResourceNamePolicy="FileFormatDefault" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include="Tokenizer\States\entities.json" />
+  </ItemGroup>
+</Project>
