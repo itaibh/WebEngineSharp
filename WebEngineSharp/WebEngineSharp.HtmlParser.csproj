@@ -180,6 +180,9 @@
     <Compile Include="Tokenizer\States\RCDATAEndTagOpenState.cs" />
     <Compile Include="Tokenizer\States\RCDATAEndTagNameState.cs" />
     <Compile Include="Tokenizer\States\PLAINTEXTState.cs" />
+    <Compile Include="DOM\IHTMLTableElement.cs" />
+    <Compile Include="DOM\IHTMLTableSectionElement.cs" />
+    <Compile Include="DOM\IHTMLTableRowElement.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Cairo" />

@@ -12,17 +12,22 @@ namespace WebEngineSharp.DOM.Impl
         }
 
         public const ushort ELEMENT_NODE = 1;
-        public const ushort ATTRIBUTE_NODE = 2; // historical
+        public const ushort ATTRIBUTE_NODE = 2;
+        // historical
         public const ushort TEXT_NODE = 3;
-        public const ushort CDATA_SECTION_NODE = 4; // historical
-        public const ushort ENTITY_REFERENCE_NODE = 5; // historical
-        public const ushort ENTITY_NODE = 6; // historical
+        public const ushort CDATA_SECTION_NODE = 4;
+        // historical
+        public const ushort ENTITY_REFERENCE_NODE = 5;
+        // historical
+        public const ushort ENTITY_NODE = 6;
+        // historical
         public const ushort PROCESSING_INSTRUCTION_NODE = 7;
         public const ushort COMMENT_NODE = 8;
         public const ushort DOCUMENT_NODE = 9;
         public const ushort DOCUMENT_TYPE_NODE = 10;
         public const ushort DOCUMENT_FRAGMENT_NODE = 11;
-        public const ushort NOTATION_NODE = 12; // historical
+        public const ushort NOTATION_NODE = 12;
+        // historical
 
         public const ushort DOCUMENT_POSITION_DISCONNECTED = 0x01;
         public const ushort DOCUMENT_POSITION_PRECEDING = 0x02;
@@ -145,17 +150,62 @@ namespace WebEngineSharp.DOM.Impl
         }
 
         public ushort nodeType { get; private set; }
+
         public string nodeName { get; private set; }
+
         public string baseURI { get; private set; }
+
         public IDocument ownerDocument { get; private set; }
+
         public INode parentNode { get; private set; }
+
         public IElement parentElement { get; private set; }
+
         public NodeList childNodes { get; private set; }
+
         public INode firstChild { get; private set; }
-        public INode lastChild { get; private set; }
-        public INode previousSibling { get; private set; }
-        public INode nextSibling { get; private set; }
+
+        public INode lastChild
+        {
+            get { return childNodes.length > 0 ? childNodes[childNodes.length - 1] : null; }
+        }
+
+        public INode previousSibling
+        {
+            get {
+                if (parentNode == null || parentNode.childNodes == null)
+                {
+                    return null;
+                }
+
+                int idx = parentNode.childNodes.IndexOf(this);
+                if (idx >= 1)
+                {
+                    return parentNode.childNodes[(uint)(idx - 1)];
+                }
+                return null;
+            }
+        }
+
+        public INode nextSibling
+        {
+            get {
+                if (parentNode == null || parentNode.childNodes == null)
+                {
+                    return null;
+                }
+
+                int idx = parentNode.childNodes.IndexOf(this);
+                if (idx >= 0 && (ulong)idx < parentNode.childNodes.length - 1)
+                {
+                    return parentNode.childNodes[(uint)(idx + 1)];
+                }
+                return null;
+            }
+        }
+
         public string nodeValue { get; set; }
+
         public string textContent { get; set; }
 
         #endregion

@@ -31,7 +31,17 @@ namespace WebEngineSharp.DOM.Impl
             m_Data.Append(data);
         }
 
+        public void appendData(char data)
+        {
+            m_Data.Append(data);
+        }
+
         public void insertData(ulong offset, string data)
+        {
+            m_Data.Insert((int)offset, data);
+        }
+
+        public void insertData(ulong offset, char data)
         {
             m_Data.Insert((int)offset, data);
         }
@@ -60,6 +70,11 @@ namespace WebEngineSharp.DOM.Impl
         }
 
         #endregion
+
+        public override string ToString()
+        {
+            return string.Format("[CharacterData: data={0}, length={1}]", data, length);
+        }
     }
 }
 

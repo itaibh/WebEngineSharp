@@ -132,9 +132,9 @@ namespace WebEngineSharp.Tokenizer.InsertionMode
                 //TODO - If the stack of template insertion modes is not empty, then process the token using the rules for
                 //TODO - the "in template" insertion mode.
 
-                //TODO - Otherwise, stop parsing.
-
-                return this;
+                //       Otherwise, stop parsing.
+                base.StopParsing();
+                return null;
             }
 
             if (endTag != null && endTag.TagName == "body")

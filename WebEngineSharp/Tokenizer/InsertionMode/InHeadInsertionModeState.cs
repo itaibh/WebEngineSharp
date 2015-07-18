@@ -70,8 +70,9 @@ namespace WebEngineSharp.Tokenizer.InsertionMode
 
                     case "title":
                         //Follow the generic RCDATA element parsing algorithm. (http://www.w3.org/TR/html5/syntax.html#generic-rcdata-element-parsing-algorithm)
-                        IHTMLTitleElement titleElement = (IHTMLTitleElement)HtmlElementFactory.Instance.CreateElement("title", doc);
-                        doc.appendChild(titleElement); // TODO - Follow insert HTML element algorithm (http://www.w3.org/TR/html5/syntax.html#insert-an-html-element)
+                        //IHTMLTitleElement titleElement = (IHTMLTitleElement)HtmlElementFactory.Instance.CreateElement("title", doc);
+                        InsertHtmlElement(startTagToken, doc);
+                        //doc.appendChild(titleElement); // TODO - Follow insert HTML element algorithm (http://www.w3.org/TR/html5/syntax.html#insert-an-html-element)
                         tokenizer.SetNextState(RCDATAState.Instance);
                         TreeConstruction.Instance.SaveCurrentInsertionModeState();
                         return TextInsertionModeState.Instance;

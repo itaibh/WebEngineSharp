@@ -28,5 +28,10 @@ namespace WebEngineSharp.DOM
         {
             m_collection.Add(node);
         }
+
+        internal int IndexOf(INode node)
+        {
+            return m_collection.IndexOf(node);
+        }
 	}
 }

@@ -26,7 +26,7 @@ namespace WebEngineSharp.Tokenizer.InsertionMode
             CharacterToken characterToken = token as CharacterToken;
             if (characterToken != null)
             {
-                InsertCharacter(characterToken, doc);
+                INode node = InsertCharacter(characterToken, doc);
                 return this;
             }
 

@@ -20,7 +20,9 @@ namespace ParserTests
             HtmlTokenizer tokenizer = new HtmlTokenizer();
             IDocument doc = tokenizer.Tokenize(stream);
 
-            //IDocument doc = HtmlParser.Parse(stream); 
+            //IDocument doc = HtmlParser.Parse(stream);
+
+            Assert.AreEqual("Basic Structure Testing", doc.head.title, "title mismatch");
         }
 
         public void BasicStructure_HTML5()
